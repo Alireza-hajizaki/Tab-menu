@@ -16,3 +16,15 @@ buttonWrapper.addEventListener('click' , (e) => {
     contents.forEach(content => content.classList.remove('active'))
     mainContent.classList.add('active')
 })
+
+//background-color change by load
+
+const hexGen = () => {
+    return `#${Math.random().toString(16).slice(2,8)}`
+}
+
+
+window.addEventListener("load",()=>{
+    const backgroundColorCode = hexGen();
+    document.body.style.backgroundColor = backgroundColorCode;
+})
